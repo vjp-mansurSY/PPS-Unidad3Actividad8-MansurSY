@@ -377,6 +377,9 @@ Para probar el funcionamiento, copia el file1.php como file1.txt. Si estamos tra
 cp www/file1.php www/file1.txt
 ~~~
 
+![image](https://github.com/user-attachments/assets/f13aa310-e56b-4bad-92d4-e6ac7a99f3aa)
+
+
 Vemos como en este caso, nos dejará acceso al Archivo2.ph, pero no al Archivo1.txt
 
 **Deshabilitar allow_url_include y allow_url_fopen en php.ini**
@@ -385,6 +388,9 @@ Vemos como en este caso, nos dejará acceso al Archivo2.ph, pero no al Archivo1.
 allow_url_include = Off
 allow_url_fopen = Off
 ~~~
+
+![image](https://github.com/user-attachments/assets/0907a675-6a5e-4b6b-aab9-cae6af91f1fe)
+
 
 ![](images/lfi9.png)
 
@@ -395,6 +401,9 @@ Recuerda reiniciar el servicio para que se apliquen las configuraciones, por eje
 ~~~
 docker-compose restart webserver
 ~~~
+
+![image](https://github.com/user-attachments/assets/d96c4934-c31e-4b9d-915d-a17a3757aac6)
+
 
 ¿Qué hacen estas configuraciones?
 
@@ -446,6 +455,9 @@ if (isset($_GET['file'])) {
 </body>
 </html>
 ~~~
+
+![image](https://github.com/user-attachments/assets/d012852f-8330-4ec0-9855-dd5760b9070e)
+
 
 - Asi verificamos de directorios están en el mismo directorio que lfi.php
 
@@ -515,6 +527,9 @@ if (isset($_GET['file'])) {
 </body>
 </html>
 ~~~
+
+![image](https://github.com/user-attachments/assets/b084be9c-d9ef-44f4-9817-c6c7b875a705)
+
 🔒 Medidas de seguridad implementadas
 
 - Lista blanca de archivos permitidos ($archivos_permitidos):
